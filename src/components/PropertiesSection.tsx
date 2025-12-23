@@ -18,10 +18,12 @@ const PropertiesSection = () => {
               추천 매물
             </h2>
           </div>
-          <Button variant="ghost" className="mt-4 md:mt-0 text-primary hover:text-accent">
-            전체 매물 보기
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          <Link to="/properties">
+            <Button variant="ghost" className="mt-4 md:mt-0 text-primary hover:text-accent">
+              전체 매물 보기
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
         </div>
 
         {/* Properties Grid */}
