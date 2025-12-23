@@ -82,7 +82,12 @@ const HeroSection = () => {
               <Phone className="w-5 h-5" />
               전화 상담하기
             </Button>
-            <Button variant="outline" size="xl" className="border-cream text-cream hover:bg-cream hover:text-foreground">
+            <Button 
+              variant="outline" 
+              size="xl" 
+              className="border-cream text-cream hover:bg-cream hover:text-foreground"
+              onClick={() => document.getElementById('properties')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               매물 보러가기
             </Button>
           </div>
