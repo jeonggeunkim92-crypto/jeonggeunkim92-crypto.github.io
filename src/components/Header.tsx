@@ -6,10 +6,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "홈", href: "#" },
-    { name: "매물보기", href: "#properties" },
-    { name: "서비스", href: "#services" },
-    { name: "연락처", href: "#contact" },
+    { name: "홈", href: "/" },
+    { name: "매물보기", href: "/#properties" },
+    { name: "서비스", href: "/#services" },
+    { name: "블로그", href: "/blog" },
+    { name: "연락처", href: "/#contact" },
   ];
 
   return (
