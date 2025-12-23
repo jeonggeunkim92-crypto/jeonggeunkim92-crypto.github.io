@@ -51,20 +51,26 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 mb-10 animate-fade-up"
             style={{ animationDelay: "0.4s" }}
           >
-            <div className="flex items-center gap-3 bg-card/10 backdrop-blur-sm rounded-xl px-5 py-3 border border-cream/20">
+            <a 
+              href="tel:031-262-4959" 
+              className="flex items-center gap-3 bg-card/10 backdrop-blur-sm rounded-xl px-5 py-3 border border-cream/20 hover:bg-card/20 transition-colors"
+            >
               <Phone className="w-5 h-5 text-accent" />
               <div>
                 <p className="text-xs text-cream/60">대표전화</p>
                 <p className="text-cream font-bold">031-262-4959</p>
               </div>
-            </div>
-            <div className="flex items-center gap-3 bg-card/10 backdrop-blur-sm rounded-xl px-5 py-3 border border-cream/20">
+            </a>
+            <a 
+              href="tel:010-4684-3412" 
+              className="flex items-center gap-3 bg-card/10 backdrop-blur-sm rounded-xl px-5 py-3 border border-cream/20 hover:bg-card/20 transition-colors"
+            >
               <Phone className="w-5 h-5 text-accent" />
               <div>
                 <p className="text-xs text-cream/60">휴대전화</p>
                 <p className="text-cream font-bold">010-4684-3412</p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* CTA Buttons */}
