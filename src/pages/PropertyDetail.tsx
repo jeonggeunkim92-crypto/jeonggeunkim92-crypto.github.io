@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { 
   ArrowLeft, 
@@ -31,6 +31,11 @@ const PropertyDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
+
+  // 페이지 진입 시 상단으로 스크롤
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const property = getPropertyById(id || "");
 
