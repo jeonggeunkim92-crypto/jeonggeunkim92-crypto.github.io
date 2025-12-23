@@ -9,7 +9,7 @@ const Header = () => {
     { name: "홈", href: "/" },
     { name: "매물보기", href: "/#properties" },
     { name: "서비스", href: "/#services" },
-    { name: "블로그", href: "https://jeonggeunkim92-crypto.github.io/#/blog" },
+    { name: "블로그", href: "/blog" },
     { name: "연락처", href: "/#contact" },
   ];
 
