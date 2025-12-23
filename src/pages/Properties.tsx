@@ -5,10 +5,15 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { properties } from "@/data/properties";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Properties = () => {
   const [filter, setFilter] = useState<"전체" | "매매" | "전세" | "월세">("전체");
+
+  // 페이지 진입 시 상단으로 스크롤
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filteredProperties = filter === "전체" 
     ? properties 
