@@ -22,6 +22,11 @@ const BlogPost = () => {
   const [post, setPost] = useState<BlogPostData | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // 페이지 진입 시 상단으로 스크롤
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
   useEffect(() => {
     const fetchPost = async () => {
       if (!slug) return;
