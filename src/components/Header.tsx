@@ -2,7 +2,7 @@ import { Building2, Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-
+import PhoneCallDialog from "./PhoneCallDialog";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -69,10 +69,12 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="gold" size="sm">
-              <Phone className="w-4 h-4" />
-              상담하기
-            </Button>
+            <PhoneCallDialog>
+              <Button variant="gold" size="sm">
+                <Phone className="w-4 h-4" />
+                상담하기
+              </Button>
+            </PhoneCallDialog>
           </div>
 
           {/* Mobile Menu Button */}
@@ -98,10 +100,12 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
-              <Button variant="gold" size="sm" className="mt-2">
-                <Phone className="w-4 h-4" />
-                상담하기
-              </Button>
+              <PhoneCallDialog>
+                <Button variant="gold" size="sm" className="mt-2">
+                  <Phone className="w-4 h-4" />
+                  상담하기
+                </Button>
+              </PhoneCallDialog>
             </nav>
           </div>
         )}

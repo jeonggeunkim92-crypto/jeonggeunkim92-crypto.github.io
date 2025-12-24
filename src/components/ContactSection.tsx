@@ -1,5 +1,6 @@
 import { Phone, MessageSquare, Clock, MapPin, Building2, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import PhoneCallDialog from "./PhoneCallDialog";
 
 const ContactSection = () => {
   return (
@@ -21,10 +22,12 @@ const ContactSection = () => {
 
             {/* Contact Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Button variant="gold" size="lg" className="flex-1">
-                <Phone className="w-5 h-5" />
-                전화 상담
-              </Button>
+              <PhoneCallDialog>
+                <Button variant="gold" size="lg" className="flex-1">
+                  <Phone className="w-5 h-5" />
+                  전화 상담
+                </Button>
+              </PhoneCallDialog>
               <Button 
                 variant="outline" 
                 size="lg" 
