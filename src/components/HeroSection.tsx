@@ -1,6 +1,7 @@
 import { Phone, MapPin, Clock, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-building.jpg";
+import PhoneCallDialog from "./PhoneCallDialog";
 
 const HeroSection = () => {
   return (
@@ -78,10 +79,12 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 animate-fade-up"
             style={{ animationDelay: "0.5s" }}
           >
-            <Button variant="gold" size="xl">
-              <Phone className="w-5 h-5" />
-              전화 상담하기
-            </Button>
+            <PhoneCallDialog>
+              <Button variant="gold" size="xl">
+                <Phone className="w-5 h-5" />
+                전화 상담하기
+              </Button>
+            </PhoneCallDialog>
             <Button 
               variant="outline" 
               size="xl" 
