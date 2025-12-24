@@ -41,20 +41,20 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group bg-card rounded-2xl p-8 shadow-card hover-lift cursor-pointer border border-border/50 animate-fade-up"
+              className="group bg-card rounded-xl md:rounded-2xl p-4 md:p-8 shadow-card hover-lift cursor-pointer border border-border/50 animate-fade-up"
               style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
-                <service.icon className="w-7 h-7 text-primary group-hover:text-accent-foreground transition-colors duration-300" />
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-primary/10 rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-6 group-hover:bg-accent transition-colors duration-300">
+                <service.icon className="w-5 h-5 md:w-7 md:h-7 text-primary group-hover:text-accent-foreground transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-base md:text-xl font-bold text-foreground mb-1 md:mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
             </div>
